@@ -16,7 +16,7 @@
     </tr>
     <tr *ngFor="let m of registrazione">
       <td>{{ m.autore }}</td>
-      <td>{{ m.titolo }}</td>
+      <td>{{ m.titolo | uppercase}}</td>
       <td>{{ m.prezzo }}</td>
       <td>
         <img *ngIf="imm" [src]="m.immagine" width="100" height="100" />
