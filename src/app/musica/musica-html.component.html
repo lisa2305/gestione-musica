@@ -1,18 +1,26 @@
-<button id="b" (click)="mostraImmagine()">Mostra immagini</button>
+<label for="m">Inserisci filtro: </label>
+<input type="text" placeholder="autore o titolo" [(ngModel)]="musica" />
 <p></p>
-<table>
-  <tr>
-    <th>AUTORE</th>
-    <th>TITOLO</th>
-    <th>PREZZO</th>
-    <th>IMMAGINE</th>
-  </tr>
-  <tr *ngFor="let m of registrazione">
-    <td>{{ m.autore }}</td>
-    <td>{{ m.titolo }}</td>
-    <td>{{ m.prezzo }}</td>
-    <td>
-      <img *ngIf="imm" [src]="m.immagine" width="100" height="100" />
-    </td>
-  </tr>
-</table>
+<label for="m">Filtrato per: {{musica}}</label>
+
+<!--tabella-->
+<div>
+  <p></p>
+  <button id="b" (click)="mostraImmagine()">Mostra immagini</button>
+  <table>
+    <tr>
+      <th>AUTORE</th>
+      <th>TITOLO</th>
+      <th>PREZZO</th>
+      <th>IMMAGINE</th>
+    </tr>
+    <tr *ngFor="let m of registrazione">
+      <td>{{ m.autore }}</td>
+      <td>{{ m.titolo }}</td>
+      <td>{{ m.prezzo }}</td>
+      <td>
+        <img *ngIf="imm" [src]="m.immagine" width="100" height="100" />
+      </td>
+    </tr>
+  </table>
+</div>

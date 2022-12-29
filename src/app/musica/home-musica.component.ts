@@ -10,7 +10,7 @@ import { MUSICA } from './lista-musica.component';
 export class MusicaComponent {
   registrazione = MUSICA;
   imm: boolean = false;
-  musicaSel?:IRegistrazione
+  musica?: IRegistrazione;
 
   mostraImmagine() {
     this.imm = !this.imm;
