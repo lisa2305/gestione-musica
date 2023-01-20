@@ -1,7 +1,7 @@
 <label for="m">Inserisci filtro: </label>
 <input type="text" placeholder="autore o titolo" [(ngModel)]="musica" />
 <p></p>
-<label for="m">Filtrato per: {{musica}}</label>
+<label for="m">Filtrato per: {{ musica }}</label>
 
 <!--tabella-->
 <div>
@@ -16,7 +16,7 @@
     </tr>
     <tr *ngFor="let m of registrazione">
       <td>{{ m.autore }}</td>
-      <td>{{ m.titolo | uppercase}}</td>
+      <td>{{ m.titolo | uppercase }}</td>
       <td>{{ m.prezzo }}</td>
       <td>
         <img *ngIf="imm" [src]="m.immagine" width="100" height="100" />
